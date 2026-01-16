@@ -12,12 +12,12 @@ const Login = () => {
 
     const { loading, error, status } = useSelector((state) => state.auth);
 
-    // reset error/status on mount
+    
     useEffect(() => {
         dispatch(resetStatus());
     }, [dispatch]);
 
-    // navigate after successful login
+    
     useEffect(() => {
         if (status === "success") {
             navigate("/dashboard", { replace: true });
@@ -70,7 +70,7 @@ const Login = () => {
                     {loading ? "Logging in..." : "Login"}
                 </button>
 
-                {/* DummyJSON test credentials */}
+             
                 <p className="text-xs text-gray-500 mt-4 text-center">
                     Test user: <b>emilys</b> / <b>emilyspass</b>
                 </p>
